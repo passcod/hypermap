@@ -1,6 +1,6 @@
 {
   "name": "hypermap",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Like a BiMap, but with N values instead of pairs",
   "main": "index.js",
   "scripts": {
