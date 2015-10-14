@@ -21,7 +21,8 @@ Each item in each tuple is added to the new HyperMap. `null` is treated as `unde
 
 Associates two or more items. Throws if less than two arguments are passed. If
 neither item exists in the HyperMap, creates a new association, otherwise adds
-the items to the existing association.
+the items to the existing association. Throws if you try to associate an item
+already present in another association.
 
 Returns the `HyperMap` object.
 
@@ -35,7 +36,11 @@ Returns the `HyperMap` object.
 
 ### Map.prototype.get(ref)
 
-Returns the association that contains `ref`, as a `Set`.
+Returns the association that contains `ref`, as a `Set`, or `undefined` if not found.
+
+### Map.prototype.has(ref)
+
+Returns a boolean indicating whether `ref` is in the `HyperMap`.
 
 ## License
 
