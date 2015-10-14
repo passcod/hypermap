@@ -45,20 +45,26 @@ class HyperMap {
     return this
   }
 
-  disassociate (ref, itemsToRemove) {
+  disassociate () {
+    const itemsToRemove = []
+    const ref = arguments[0]
+    for (let i = 1; i < arguments.length; i += 1) {
+      itemsToRemove.push(arguments[i])
+    }
+
     const bucketIndex = this.index.get(ref)
     if (!bucketIndex) return this // nothing to do
 
     const bucket = this.buckets.get(bucketIndex)
     for (let item of itemsToRemove) {
-      bucket.remove(item)
+      bucket.delete(item)
     }
 
     // It makes no sense to have a single- or zero- value bucket
     if (bucket.size < 2) {
       this.buckets.delete(bucketIndex)
       for (let item of bucket) {
-        this.index.remove(item)
+        this.index.delete(item)
       }
     }
 
