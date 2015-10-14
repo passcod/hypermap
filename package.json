@@ -1,0 +1,28 @@
+{
+  "name": "hypermap",
+  "version": "1.0.0",
+  "description": "Like a BiMap, but with N values instead of pairs",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/passcod/hypermap.git"
+  },
+  "keywords": [
+    "map",
+    "bimap",
+    "data"
+  ],
+  "author": "Félix Saparelli <me@passcod.name>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/passcod/hypermap/issues"
+  },
+  "homepage": "https://github.com/passcod/hypermap#readme",
+  "devDependencies": {
+    "standard": "^5.3.1"
+  },
+  "dependencies": {}
+}
