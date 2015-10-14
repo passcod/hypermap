@@ -17,7 +17,7 @@ npm install --save hypermap
 `iterable` is an Array or other iterable object whose elements are tuples (arrays).
 Each item in each tuple is added to the new HyperMap. `null` is treated as `undefined`.
 
-### Map.prototype.associate(items...)
+### HyperMap.prototype.associate(items...)
 
 Associates two or more items. Throws if less than two arguments are passed. If
 neither item exists in the HyperMap, creates a new association, otherwise adds
@@ -26,7 +26,7 @@ already present in another association.
 
 Returns the `HyperMap` object.
 
-### Map.prototype.disassociate(ref, itemsToRemove...)
+### HyperMap.prototype.disassociate(ref, itemsToRemove...)
 
 Disassociate items. Selects an association based on `ref`, then removes items
 from it as directed. Does nothing if an association is not found. If, as a result
@@ -34,11 +34,11 @@ of this method, an association now has less than two items, it is destroyed.
 
 Returns the `HyperMap` object.
 
-### Map.prototype.get(ref)
+### HyperMap.prototype.get(ref)
 
 Returns the association that contains `ref`, as a `Set`, or `undefined` if not found.
 
-### Map.prototype.has(ref)
+### HyperMap.prototype.has(ref)
 
 Returns a boolean indicating whether `ref` is in the `HyperMap`.
 
