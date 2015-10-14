@@ -37,6 +37,10 @@ class HyperMap {
     }
 
     for (let arg of arguments) {
+      if (this.has(arg) && !bucket.has(arg)) {
+        throw new Error('HyperMap: Cannot associate item already associated elsewhere')
+      }
+
       bucket.add(arg)
       this.index.set(arg, bucketIndex)
     }
@@ -74,6 +78,10 @@ class HyperMap {
   get (ref) {
     const bucketIndex = this.index.get(ref)
     if (bucketIndex) return this.buckets.get(bucketIndex)
+  }
+
+  has (ref) {
+    return this.index.has(ref)
   }
 }
 
