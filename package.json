@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/passcod/hypermap#readme",
   "devDependencies": {
-    "standard": "^5.3.1"
+    "standard": "^9.0.2"
   },
   "dependencies": {}
 }
