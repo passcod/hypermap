@@ -1,5 +1,7 @@
 # HyperMap
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/passcod/hypermap.svg)](https://greenkeeper.io/)
+
 A more generic version of BiMap (as seen in [C++ Boost][1], [Google][2]), that
 associates two or more values together, such that only one is required to recall
 all others.
